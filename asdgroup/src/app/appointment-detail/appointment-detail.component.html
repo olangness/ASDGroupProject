@@ -1,3 +1,5 @@
-<p>
-  appointment-detail works!
-</p>
+<h2>Appointment Detail</h2>
+<h3>{{errorMsg}}</h3>
+<ul *ngFor="let Appointment of Appointments_Table">
+  <li>{{Appointment.appointmentid}}. {{Appointment.studentid}} - {{Appointment.advisorid}} - {{Appointment.reason}}</li>
+</ul>
