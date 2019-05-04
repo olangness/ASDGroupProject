@@ -6,27 +6,26 @@ import { LoginComponent } from './login/login.component';
 import {AngularFireModule} from '@angular/fire';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {AngularFireStorageModule} from '@angular/fire/storage';
+import {AngularFireDatabaseModule} from 'angularfire2/database';
 import {environment} from '../environments/environment';
-import { AppointmentListComponent } from './appointment-list/appointment-list.component';
-import { AppointmentDetailComponent } from './appointment-detail/appointment-detail.component';
-import { AddAppointmentComponent } from './add-appointment/add-appointment.component';
+import { NewAppointmentComponent } from './new-appointment/new-appointment.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    AppointmentListComponent,
-    AppointmentDetailComponent,
-    AddAppointmentComponent
+    NewAppointmentComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
