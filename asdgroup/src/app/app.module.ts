@@ -10,6 +10,8 @@ import { LoginComponent } from './login/login.component';
 import {environment} from '../environments/environment';
 import { AppointmentCardComponent } from './appointment-card/appointment-card.component';
 import { HomedetailsComponent } from './homedetails/homedetails.component';
+import { AddappointmentComponent } from './addappointment/addappointment.component';
+import { EditappointmentComponent } from './editappointment/editappointment.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { HomedetailsComponent } from './homedetails/homedetails.component';
     LoginComponent,
     AppointmentCardComponent,
     HomedetailsComponent,
+    AddappointmentComponent,
+    EditappointmentComponent,
   ],
   imports: [
     BrowserModule,
