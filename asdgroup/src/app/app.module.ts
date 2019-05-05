@@ -12,6 +12,8 @@ import { AppointmentCardComponent } from './appointment-card/appointment-card.co
 import { HomedetailsComponent } from './homedetails/homedetails.component';
 import { AppointmentListComponent } from './appointment-list/appointment-list.component';
 import { AppointmentService } from './appointment.service';
+import { AddappointmentComponent } from './addappointment/addappointment.component';
+import { EditappointmentComponent } from './editappointment/editappointment.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { AppointmentService } from './appointment.service';
     AppointmentCardComponent,
     HomedetailsComponent,
     AppointmentListComponent,
+    AddappointmentComponent,
+    EditappointmentComponent,
   ],
   imports: [
     BrowserModule,

@@ -2,3 +2,30 @@
   <app-login (showChange)="changeShow($event)"></app-login>
   <app-appointment-list></app-appointment-list>
 </div>
+</div>
+
+<div class="homedetails" *ngIf="show=='home'">
+    <app-homedetails (showChange)="changeShow($event)"></app-homedetails>
+  </div>
+<br>
+
+<button *ngIf="show=='home'" (click)="showAddAppointment()">Add Apointments</button>
+<div class="addappointment" *ngIf="show=='addappointment'">
+    <app-addappointment (showChange)="changeShow($event)"></app-addappointment>
+  </div>
+
+
+<br>
+
+<div class="appointments" *ngIf="show=='home'">
+
+  <app-appointment-card [appointment] = 'appointment1'></app-appointment-card>
+  <app-appointment-card [appointment] = 'appointment2'></app-appointment-card>
+  <app-appointment-card [appointment] = 'appointment3'></app-appointment-card>
+
+  
+
+</div>
+
+
+

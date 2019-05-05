@@ -1,0 +1,7 @@
+Add Output and EventEmitter to the import
+
+add this to the child component 
+@Output() showChange = new EventEmitter();
+
+and then when you want to hide the current component and go back to the right view use
+this.showChange.emit('ngIfKeywordfrom_app.component.html');

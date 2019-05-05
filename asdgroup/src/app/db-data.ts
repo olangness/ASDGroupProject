@@ -3,27 +3,32 @@ export const USERS: any = [
     {
         username: 'mattmartin',
         password: '123',
-        role: 'student'
+        role: 'student',
+        studentID: 1
     },
     {
         username: 'jarrettmeester',
         password: '456',
-        role: 'advisor'
+        role: 'advisor',
+        advisorID: 1
     },
     {
         username: 'sampenney',
         password: '789',
-        role: 'student'
+        role: 'student',
+        studentID: 2
     },
     {
         username: 'drewwickoren',
         password: '123',
-        role: 'student'
+        role: 'student',
+        studentID: 3
     },
     {
         username: 'olsonlangness',
         password: '456',
-        role: 'advisor'
+        role: 'advisor',
+        advisorID: 2
     },
 ]
 //the appoints got copied and pasted into app.components.ts but im leaving this here incase we need to revert back. Needs to get imported if this is going to get used -matt

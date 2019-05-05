@@ -7,5 +7,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'asdgroup'; 
+   show = 'login';
+   title = 'asdgroup';
+
+   //changes the ng if variable
+   changeShow(showInput) {
+     this.show = showInput;
+   }
+
+   showAddAppointment(){
+     this.show = 'addappointment'
+   }
+
+   showEditAppointment(){
+    this.show = 'editappointment'
+  }
+  
 }
