@@ -3,6 +3,7 @@
   <app-login (showChange)="changeShow($event)"></app-login>
 </div>
 <div class="appointments" *ngIf="show=='home'">
+
   <app-appointment-card [appointment] = 'appointment1'></app-appointment-card>
   <app-appointment-card [appointment] = 'appointment2'></app-appointment-card>
   <app-appointment-card [appointment] = 'appointment3'></app-appointment-card>
