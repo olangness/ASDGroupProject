@@ -1,3 +1,43 @@
 
 
+<select id="hourBox">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+</select>
+:
+<select id="minuteBox">
+        <option value="00">00</option>
+        <option value="30">30</option>
+</select>
+
+<select id="amOrPmBox">
+        <option value="AM">AM</option>
+        <option value="PM">PM</option>
+</select>
+
+<br>
+<br>
+
+<form >
+    Reason <input id="reason" type="text" name="fname"><br>
+   
+
+  </form>
+
+  <br>
+
+<button (click)="add()">Add Appointment</button>
+
+<br>
+
 <button (click)="goBack()">Go Back</button>

@@ -13,6 +13,15 @@ export class AddappointmentComponent implements OnInit {
   ngOnInit() {
   }
 
+  add() {
+    var  hour: string = document.getElementById("hourBox").innerText
+    var  minute: string = document.getElementById("minuteBox").innerText
+    var  amOrPM: string = document.getElementById("amOrPmBox").innerText
+    var  reason: string = document.getElementById("reason").innerText
+
+    
+  }
+
 
   goBack() {
     this.showChange.emit('home');
