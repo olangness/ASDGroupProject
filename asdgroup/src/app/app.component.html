@@ -13,5 +13,13 @@
 </div>
 
 <div class="homedetails" *ngIf="show=='home'">
-  <app-homedetails (showChangge)="changeShow($event)"></app-homedetails>
+  <app-homedetails (showChange)="changeShow($event)"></app-homedetails>
+</div>
+
+<div class="addappointment" *ngIf="show=='addappointment'">
+    <app-addappointment (showChange)="changeShow($event)"></app-addappointment>
+  </div>
+
+<div class="editappointment" *ngIf="show=='editappointment'">
+  <app-editappointment (showChange)="changeShow($event)"></app-editappointment>
 </div>
