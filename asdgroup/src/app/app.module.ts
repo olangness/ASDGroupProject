@@ -8,13 +8,13 @@ import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {AngularFireStorageModule} from '@angular/fire/storage';
 import {AngularFireDatabaseModule} from 'angularfire2/database';
 import {environment} from '../environments/environment';
-import { NewAppointmentComponent } from './new-appointment/new-appointment.component';
+import { AppointmentCardComponent } from './appointment-card/appointment-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    NewAppointmentComponent,
+    AppointmentCardComponent,
   ],
   imports: [
     BrowserModule,
