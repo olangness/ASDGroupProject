@@ -19,7 +19,7 @@ export class AddappointmentComponent implements OnInit {
     var  amOrPM: string = document.getElementById("amOrPmBox").innerText
     var  reason: string = document.getElementById("reason").innerText
 
-    
+    //put code to add to firebase here
   }
 
 
