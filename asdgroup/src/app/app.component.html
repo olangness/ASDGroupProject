@@ -11,3 +11,7 @@
   
 
 </div>
+
+<div class="homedetails" *ngIf="show=='home'">
+  <app-homedetails (showChangge)="changeShow($event)"></app-homedetails>
+</div>
