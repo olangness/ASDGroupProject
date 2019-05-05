@@ -16,4 +16,7 @@ export class AppointmentCardComponent implements OnInit {
   ngOnInit() {
   }
 
+  deleteAppointment() {
+    //put appointment deletion code here
+  }
 }
