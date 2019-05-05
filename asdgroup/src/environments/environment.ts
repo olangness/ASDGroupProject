@@ -10,7 +10,7 @@ export const environment = {
     databaseURL: "https://csci313.firebaseio.com",
     projectId: "csci313",
     storageBucket: "csci313.appspot.com",
-    messagingSenderId: "880322069342"
+    messagingSenderId: "880322069342",
   }
 };
 
