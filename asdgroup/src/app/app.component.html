@@ -6,7 +6,10 @@
 <div class="homedetails" *ngIf="show=='home'">
     <app-homedetails (showChange)="changeShow($event)"></app-homedetails>
   </div>
-  
+
+<button *ngIf="show=='home'" (click)="showAddAppointment()">Add Apointments</button>
+<button *ngIf="show=='home'" (click)="showEditAppointment()">Edit Apointments</button>
+
 <div class="appointments" *ngIf="show=='home'">
 
   <app-appointment-card [appointment] = 'appointment1'></app-appointment-card>

@@ -1,3 +1,5 @@
+Add Output and EventEmitter to the import
+
 add this to the child component 
 @Output() showChange = new EventEmitter();
 
