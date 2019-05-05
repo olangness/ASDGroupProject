@@ -40,5 +40,13 @@ export class AppComponent {
    changeShow(showInput) {
      this.show = showInput;
    }
+
+   showAddAppointment(){
+     this.show = 'addappointment'
+   }
+
+   showEditAppointment(){
+    this.show = 'editappointment'
+  }
   
 }

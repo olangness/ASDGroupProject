@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Output, OnInit, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-addappointment',
@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./addappointment.component.css']
 })
 export class AddappointmentComponent implements OnInit {
+  @Output() showChange = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() {
   }
 
+
+  goBack() {
+    this.showChange.emit('home');
+  }
 }
