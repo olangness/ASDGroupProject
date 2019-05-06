@@ -25,4 +25,14 @@ export class AppointmentService {
   addAppointments(app: Appointment){
     this.appoinmentCollection.add(app);
   }
+
+  creeteAppointment(data: Appointment){
+    return new Promise<any>((resolve, reject) =>{
+      this.appoinmentCollection.add(data).then(res => {}, err => reject(err));
+    });
+  }
+
+  deleteAppointment(data){
+    return this.appoinmentCollection.doc(data.payload.doc.id).delete();
+  }
 }
