@@ -30,4 +30,15 @@ export class EditappointmentComponent implements OnInit {
     this.showChange.emit('home')
   }
 
+  deleteSelectedAppointment() {
+    var x = (document.getElementById("appointmentBox") as HTMLInputElement).value;
+
+    for(let i = 0; i < APPOINTMENTS.length; i++) {
+      console.log(i);
+      if(APPOINTMENTS[i].appointmentID == x) {
+        delete APPOINTMENTS[i];
+      }
+    }
+    console.log("survived ");
+  }
 }
