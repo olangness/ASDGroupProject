@@ -1,1 +1,27 @@
-<button (click)="goBack()">Go Back</button>
+
+
+
+
+
+<!-- <select>
+    <option *ngFor="let appointment of AppointmentTable" value="{{appointment.AppointmentReason}}">
+       oh hye {{appointment.AppointmentReason}}
+    </option>
+</select> -->
+
+<ul *ngFor="let appointment of AppointmentTable2">
+    ______________________________________________________
+    
+    <li>AdvisorId: {{appointment.AdvisorID}}</li>
+    <li>StudentId: {{appointment.StudentID}}</li>
+    <li>AppointmentId (Number): {{appointment.AppointmentID}}</li>
+    <li>Appointment Reason: {{appointment.AppointmentReason}}</li>
+    <li>Appointment Time: {{appointment.AppointmentTime}}</li>
+
+
+ 
+
+
+  </ul>
+
+<button (click)="goBack()">Go Back</button>      
