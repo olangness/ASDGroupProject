@@ -30,7 +30,7 @@ export class AddappointmentComponent implements OnInit {
     var advisorID: number = parseInt((document.getElementById("aID") as HTMLInputElement).value);
     //var appID: number = parseInt((document.getElementById("appID") as HTMLInputElement).value);
     
-    var time: string =  month + " " + day + " " + year + " " + hour + ":" + minute + amOrPM + " GMT-0500";
+    var time: string =  month + " " + day + " " + year + " " + hour + ":" + minute + amOrPM + " GMT-0500 (Central Daylight Time)";
     
     var appID: number = APPOINTMENTS.length + 1;
 
