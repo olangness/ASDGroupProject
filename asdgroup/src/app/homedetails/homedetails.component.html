@@ -1,9 +1,19 @@
 <p>Home Details</p>
-<ul *ngFor="let item of AppointmentTable">
-        
-    <li>AdvisorId: {{item.advisorID}}</li>
-    <li>StudentId: {{item.studentID}}</li>
-    <li>AppointmentId: {{item.appointmentID}}</li>
-    <li>Appointment Reason: {{item.appointmentReason}}</li>
-    <li>Appointment Time: {{item.appointmentTime}}</li>
-</ul>
+<ul *ngFor="let appointment of AppointmentTable">
+        <div *ngIf="this.appservice.getRole()=='advisor'">
+          <div *ngIf="this.appservice.getId()==appointment.advisorID">
+              <li>StudentId: {{appointment.studentID}}</li>
+              <li>AppointmentId: {{appointment.appointmentID}}</li>
+              <li>Appointment Reason: {{appointment.appointmentReason}}</li>
+              <li>Appointment Time: {{appointment.appointmentTime}}</li>
+          </div>
+      </div>
+      <div *ngIf="this.appservice.getRole()=='student'">
+        <div *ngIf="this.appservice.getId()==appointment.studentID">
+          <li>AdvisorId: {{appointment.advisorID}}</li>
+          <li>AppointmentId: {{appointment.appointmentID}}</li>
+          <li>Appointment Reason: {{appointment.appointmentReason}}</li>
+          <li>Appointment Time: {{appointment.appointmentTime}}</li>
+        </div>
+      </div>
+      </ul>

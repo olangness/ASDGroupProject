@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserInfoService } from './user-info.service';
 
 
 @Component({

@@ -76,8 +76,8 @@ Set Date(m/d/y):
 
 <form >
     Reason: <input id="reason" type="text" name="fname"><br>
-    Student ID: <input id="sID" type="text" name="sID"><br> <!--added for testing-->
-    Advisor ID: <input id="aID" type="text" name="aID"><br> <!--added for testing-->
+    <div *ngIf="this.appservice.getRole()=='advisor'">Student ID: <input id="sID" type="text" name="sID"><br> <!--added for testing--></div>
+    <div *ngIf="this.appservice.getRole()=='student'">Advisor ID: <input id="aID" type="text" name="aID"><br> <!--added for testing--></div>
     
     
   </form>
@@ -90,10 +90,21 @@ Set Date(m/d/y):
 
 <button (click)="goBack()">Go Back</button>
 
-<ul *ngFor="let appointment of AppointmentTable">  
-  <li>AdvisorId: {{appointment.advisorID}}</li>
-  <li>StudentId: {{appointment.studentID}}</li>
-  <li>AppointmentId: {{appointment.appointmentID}}</li>
-  <li>Appointment Reason: {{appointment.appointmentReason}}</li>
-  <li>Appointment Time: {{appointment.appointmentTime}}</li>
+<ul *ngFor="let appointment of AppointmentTable">
+  <div *ngIf="this.appservice.getRole()=='advisor'">
+    <div *ngIf="this.appservice.getId()==appointment.advisorID">
+        <li>StudentId: {{appointment.studentID}}</li>
+        <li>AppointmentId: {{appointment.appointmentID}}</li>
+        <li>Appointment Reason: {{appointment.appointmentReason}}</li>
+        <li>Appointment Time: {{appointment.appointmentTime}}</li>
+    </div>
+</div>
+<div *ngIf="this.appservice.getRole()=='student'">
+  <div *ngIf="this.appservice.getId()==appointment.studentID">
+    <li>AdvisorId: {{appointment.advisorID}}</li>
+    <li>AppointmentId: {{appointment.appointmentID}}</li>
+    <li>Appointment Reason: {{appointment.appointmentReason}}</li>
+    <li>Appointment Time: {{appointment.appointmentTime}}</li>
+  </div>
+</div>
 </ul>

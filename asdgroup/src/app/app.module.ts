@@ -8,7 +8,6 @@ import {AngularFirestoreModule, AngularFirestore} from '@angular/fire/firestore'
 import {AngularFireStorageModule} from '@angular/fire/storage';
 import {AngularFireDatabaseModule} from 'angularfire2/database';
 import {environment} from '../environments/environment';
-import { AppointmentCardComponent } from './appointment-card/appointment-card.component';
 import { HomedetailsComponent } from './homedetails/homedetails.component';
 
 //import { AppointmentService } from './appointment.service';
@@ -21,7 +20,6 @@ import { InternalFormsSharedModule } from '@angular/forms/src/directives';
   declarations: [
     AppComponent,
     LoginComponent,
-    AppointmentCardComponent,
     HomedetailsComponent,
     AddappointmentComponent,
     EditappointmentComponent,

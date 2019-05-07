@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {APPOINTMENTS} from '../db-data';
 import { Appointment} from '../appointment';
+import { UserInfoService } from '../user-info.service';
 
 
 @Component({
@@ -12,7 +13,7 @@ export class HomedetailsComponent implements OnInit {
 
   AppointmentTable: Appointment[] = APPOINTMENTS;
 
-  constructor() { }
+  constructor(private appservice: UserInfoService) { }
 
   ngOnInit() {
   }
