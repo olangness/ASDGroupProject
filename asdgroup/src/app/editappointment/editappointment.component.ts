@@ -17,7 +17,7 @@ export class EditappointmentComponent implements OnInit {
 
   @Output() showChange = new EventEmitter();
 
-  constructor(private appService: AppointmentService) { 
+  constructor() { 
     
   }
 
