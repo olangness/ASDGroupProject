@@ -26,13 +26,13 @@ export class AppointmentService {
     this.appoinmentCollection.add(app);
   }
 
-  creeteAppointment(data: Appointment){
+  creeteAppointment(data: Appointment){ //havent gotten to work yet
     return new Promise<any>((resolve, reject) =>{
       this.appoinmentCollection.add(data).then(res => {}, err => reject(err));
     });
   }
 
-  deleteAppointment(data){
+  deleteAppointment(data){ //havent gotten to work yet
     return this.appoinmentCollection.doc(data.payload.doc.id).delete();
   }
 }
