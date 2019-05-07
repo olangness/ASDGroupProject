@@ -1,5 +1,5 @@
 //the users got copied and pasted into login.component.ts but im leaving this here incase we need it. Needs to get imported if this is going to get used -matt
-export const USERS: any = [
+export let USERS: any = [
     {
         username: 'mattmartin',
         password: '123',
@@ -32,7 +32,7 @@ export const USERS: any = [
     },
 ]
 //the appoints got copied and pasted into app.components.ts but im leaving this here incase we need to revert back. Needs to get imported if this is going to get used -matt
-export const APPOINTMENTS: any =[
+export let APPOINTMENTS: any =[
     {
         advisorID: 1,
         studentID: 1,
