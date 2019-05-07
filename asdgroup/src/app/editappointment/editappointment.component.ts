@@ -21,9 +21,7 @@ export class EditappointmentComponent implements OnInit {
     
   }
 
-
   ngOnInit() {
-    
   }
 
   goBack() {

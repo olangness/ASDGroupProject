@@ -2,13 +2,6 @@
   <app-login (showChange)="changeShow($event)"></app-login>
 </div>
 
-<div class="homedetails" *ngIf="show=='home'">
-    <app-homedetails (showChange)="changeShow($event)"></app-homedetails>
-  </div>
-<br>
-
-<button *ngIf="show=='home'" (click)="showAddAppointment()">Add Apointments</button>
-<button *ngIf="show=='home'" (click)="showEditAppointment()">Edit Apointments</button>
 <div class="addappointment" *ngIf="show=='addappointment'">
     <app-addappointment (showChange)="changeShow($event)"></app-addappointment>
   </div>
@@ -17,6 +10,14 @@
     <app-editappointment (showChange)="changeShow($event)"></app-editappointment>
   </div>
 <br>
+
+<button *ngIf="show=='home'" (click)="showAddAppointment()">Add Apointments</button>
+    <button *ngIf="show=='home'" (click)="showEditAppointment()">Edit Apointments</button>
+<div class="homedetails" *ngIf="show=='home'">
+    
+    <app-homedetails (showChange)="changeShow($event)"></app-homedetails>
+</div>
+  <br>
 
 
 
