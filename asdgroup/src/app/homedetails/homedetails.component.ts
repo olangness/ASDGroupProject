@@ -11,7 +11,7 @@ import { UserInfoService } from '../user-info.service';
 })
 export class HomedetailsComponent implements OnInit {
 
-  AppointmentTable: Appointment[] = APPOINTMENTS;
+  AppointmentTable: Appointment[] = this.appservice.appointments;
 
   constructor(private appservice: UserInfoService) { }
 

@@ -15,6 +15,8 @@ export class AddappointmentComponent implements OnInit {
   constructor(private appservice: UserInfoService) { }
 
   AppointmentTable: Appointment[] = APPOINTMENTS;
+  currentAppointments: Appointment[] = this.appservice.appointments;
+  
 
   ngOnInit() {
   }
@@ -58,6 +60,7 @@ export class AddappointmentComponent implements OnInit {
     console.log("Time: " + newAppointment.appointmentTime);
 
     this.AppointmentTable.push(newAppointment);
+    this.appservice.appointments.push(newAppointment);
   }
 
 

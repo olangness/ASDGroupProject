@@ -90,7 +90,7 @@ Set Date(m/d/y):
 
 <button (click)="goBack()">Go Back</button>
 
-<ul *ngFor="let appointment of AppointmentTable">
+<ul *ngFor="let appointment of currentAppointments">
   <div *ngIf="this.appservice.getRole()=='advisor'">
     <div *ngIf="this.appservice.getId()==appointment.advisorID">
         <li>StudentId: {{appointment.studentID}}</li>

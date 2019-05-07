@@ -1,5 +1,5 @@
 <select name="appointmentBox" id="appointmentBox">
-    <option *ngFor="let appointment of AppointmentTable" value="{{appointment.appointmentID}}">
+    <option *ngFor="let appointment of currentAppointments" value="{{appointment.appointmentID}}">
         <div *ngIf="this.appservice.getRole()=='advisor'">
             <div *ngIf="this.appservice.getId()==appointment.advisorID">
                 {{appointment.appointmentTime}}
@@ -20,7 +20,7 @@
 <br>
 <button (click)="goBack()">Go Back</button>      
 
-<ul *ngFor="let appointment of AppointmentTable">
+<ul *ngFor="let appointment of currentAppointments">
     <div *ngIf="this.appservice.getRole()=='advisor'">
       <div *ngIf="this.appservice.getId()==appointment.advisorID">
           <li>StudentId: {{appointment.studentID}}</li>

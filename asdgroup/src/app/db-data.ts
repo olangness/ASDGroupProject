@@ -52,7 +52,7 @@ export let APPOINTMENTS: any =[
         advisorID: 1,
         studentID: 3,
         appointmentID: 3,
-        appointmentReason: 'Major',
+        appointmentReason: 'Chat',
         appointmentTime: new Date(2019, 5, 12, 15,30, 0, 0)
     }
 ]

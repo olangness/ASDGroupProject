@@ -93,6 +93,7 @@ export class LoginComponent implements OnInit {
             console.log('ID: ' + this.appservice.getId());
           }
           this.showChange.emit('home');
+          this.appservice.initializeArray();
           break;
         }
         else{
