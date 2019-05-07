@@ -32,7 +32,7 @@ export const USERS: any = [
     },
 ]
 //the appoints got copied and pasted into app.components.ts but im leaving this here incase we need to revert back. Needs to get imported if this is going to get used -matt
-export const APPOINTMENTS: any =[
+export var APPOINTMENTS: any =[
     {
         advisorID: 1,
         studentID: 1,
