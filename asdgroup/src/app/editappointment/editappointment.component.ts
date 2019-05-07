@@ -1,5 +1,5 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-import { AppointmentService} from '../appointment.service';
+
 import { Appointment} from '../appointment';
 import {APPOINTMENTS} from '../db-data';
 
