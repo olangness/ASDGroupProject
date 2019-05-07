@@ -2,10 +2,9 @@
     <h3>{{errorMsg}}</h3>
     <ul *ngFor="let appointment of AppointmentTable; let i = index">
       ______________________________________________________
-      <li>Appointment Number: {{i+1}}</li>
       <li>AdvisorId: {{appointment.AdvisorID}}</li>
       <li>StudentId: {{appointment.StudentID}}</li>
-      <li>AppointmentId: {{appointment.AppointmentID}}</li>
+      <li>AppointmentId (Number): {{appointment.AppointmentID}}</li>
       <li>Appointment Reason: {{appointment.AppointmentReason}}</li>
       <li>Appointment Time: {{appointment.AppointmentTime}}</li>
       <button (click)="deleteAppointment(appointment.AppointmentId)">Delete</button>
