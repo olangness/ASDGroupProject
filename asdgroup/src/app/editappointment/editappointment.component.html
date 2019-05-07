@@ -3,22 +3,15 @@
 
 
 
-<select>
-    <option *ngFor="let appointment of AppointmentTable" value="">
-      {{appointment.appointmentReason}}
+<select name="appointmentBox" id="appointmentBox">
+    <option *ngFor="let appointment of AppointmentTable" value="{{appointment.appointmentID}}">
+      {{appointment.appointmentTime}}
     </option>
 </select>
 
-<ul *ngFor="let item of AppointmentTable">
-  ______________________________________________________
-  
-  <li>AdvisorId: {{item.advisorID}}</li>
-  <li>StudentId: {{item.studentID}}</li>
-  <li>AppointmentId (Number): {{item.appointmentID}}</li>
-  <li>Appointment Reason: {{item.appointmentReason}}</li>
-  <li>Appointment Time: {{item.appointmentTime}}</li>
-
-</ul>
-
-
+<br>
+<br>
+<button (click)="deleteSelectedAppointment()">Delete Selected Appointment</button>
+<br>
+<br>
 <button (click)="goBack()">Go Back</button>      
