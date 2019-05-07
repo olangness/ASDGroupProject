@@ -1,11 +1,12 @@
 <h2>Appointment List</h2>
     <h3>{{errorMsg}}</h3>
-    <ul *ngFor="let appointment of AppointmentTable">
+    <ul *ngFor="let appointment of AppointmentTable; let i = index">
       <li>AdvisorId: {{appointment.AdvisorID}}</li>
       <li>StudentId: {{appointment.StudentID}}</li>
       <li>AppointmentId: {{appointment.AppointmentID}}</li>
       <li>Appointment Reason: {{appointment.AppointmentReason}}</li>
       <li>Appointment Time: {{appointment.AppointmentTime}}</li>
-      <button (click)="deleteAppointment({{appointment.AppointmentID}})">Delete</button>
+      <li>{{i}}</li>
+      <button (click)="deleteAppointment(appointment.AppointmentId)">Delete</button>
     </ul>
     
