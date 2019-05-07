@@ -3,7 +3,9 @@
 body{
     background-color: rgb(39, 39, 39);
     color: rgb(255, 255, 255);
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-ser  if;
+   /* background-image: url('https://images.pexels.com/photos/1341279/pexels-photo-1341279.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-size: cover; */
 }    
 
 button{
