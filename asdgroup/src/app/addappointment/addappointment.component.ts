@@ -1,6 +1,7 @@
 import { Component, Output, OnInit, EventEmitter } from '@angular/core';
 import { AppointmentService} from '../appointment.service';
 import { Appointment} from '../appointment';
+import { APPOINTMENTS } from '../db-data';
 
 @Component({
   selector: 'app-addappointment',
@@ -11,6 +12,8 @@ export class AddappointmentComponent implements OnInit {
   @Output() showChange = new EventEmitter();
 
   constructor() { }
+
+  AppointmentTable: Appointment[] = APPOINTMENTS;
 
   ngOnInit() {
   }
@@ -30,20 +33,16 @@ export class AddappointmentComponent implements OnInit {
     console.log("studentID: " + studentID);
     console.log("advisorID: " + advisorID);
     console.log("appID: " + appID);
+    var time: string = hour + ":" + minute + amOrPM;
 
-    var newAppointment: Appointment;
-    newAppointment.AdvisorID = advisorID;
-    newAppointment.StudentID = studentID;
-    newAppointment.AppointmentReason = reason;
-    newAppointment.AppointmentID = appID;
-    newAppointment.AppointmentTime = hour + minute + amOrPM;
-    console.log(newAppointment.AdvisorID);
-    console.log(newAppointment.StudentID);
-    console.log(newAppointment.AppointmentID);
-    console.log(newAppointment.AppointmentReason);
-    console.log(newAppointment.AppointmentTime);
+    var newAppointment: Appointment = {AdvisorID: advisorID, StudentID: studentID, AppointmentReason: reason, AppointmentID: appID, AppointmentTime: time };
+    console.log("AdvisorID: " + newAppointment.AdvisorID);
+    console.log("StudentID: " + newAppointment.StudentID);
+    console.log("AppointmentID: " + newAppointment.AppointmentID);
+    console.log("Reason: " + newAppointment.AppointmentReason);
+    console.log("Time: " + newAppointment.AppointmentTime);
 
-    //put code to add to firebase here
+    APPOINTMENTS.push(newAppointment);
   }
 
 
