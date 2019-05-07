@@ -24,8 +24,9 @@ export class AddappointmentComponent implements OnInit {
     var  reason: string = (document.getElementById("reason") as HTMLInputElement).value;
     var studentID: number = parseInt((document.getElementById("sID") as HTMLInputElement).value);
     var advisorID: number = parseInt((document.getElementById("aID") as HTMLInputElement).value);
-    var appID: number = parseInt((document.getElementById("appID") as HTMLInputElement).value);
+    //var appID: number = parseInt((document.getElementById("appID") as HTMLInputElement).value);
     var time: string = hour + ":" + minute + amOrPM;
+    var appID: number = APPOINTMENTS.length + 1;
 
     console.log("hour: " + hour); //tests to make sure data is being read
     console.log("minute: " + minute);
