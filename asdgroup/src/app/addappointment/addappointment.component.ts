@@ -13,6 +13,8 @@ export class AddappointmentComponent implements OnInit {
 
   constructor() { }
 
+  AppointmentTable: Appointment[] = APPOINTMENTS;
+
   ngOnInit() {
   }
 
