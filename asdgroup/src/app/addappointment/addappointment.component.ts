@@ -16,29 +16,30 @@ export class AddappointmentComponent implements OnInit {
   }
 
   add() {
-    var  hour: string = document.getElementById("hourBox").innerText;
-    var  minute: string = document.getElementById("minuteBox").innerText;
-    var  amOrPM: string = document.getElementById("amOrPmBox").innerText;
-    var  reason: string = document.getElementById("reason").innerText;
-    var studentID: number = parseInt(document.getElementById("sID").innerText);
-    var advisorID: number = parseInt(document.getElementById("aID").innerText);
-    var appID: number = parseInt(document.getElementById("appID").innerText);
-    console.log(hour);
-    console.log(minute);
-    console.log(amOrPM);
-    console.log(reason);
-    console.log(studentID);
-    console.log(advisorID);
-    console.log(appID);
+    var  hour: string = (<HTMLSelectElement>document.getElementById('hourBox')).value;
+    var  minute: string = (<HTMLSelectElement>document.getElementById('minuteBox')).value;
+    var  amOrPM: string =(<HTMLSelectElement>document.getElementById('amOrPmBox')).value;
+    var  reason: string = (document.getElementById("reason") as HTMLInputElement).value;
+    var studentID: number = parseInt((document.getElementById("sID") as HTMLInputElement).value);
+    var advisorID: number = parseInt((document.getElementById("aID") as HTMLInputElement).value);
+    var appID: number = parseInt((document.getElementById("appID") as HTMLInputElement).value);
+    console.log("hour: " + hour);
+    console.log("minute: " + minute);
+    console.log("amOrPM: " + amOrPM);
+    console.log("reason: " + reason);
+    console.log("studentID: " + studentID);
+    console.log("advisorID: " + advisorID);
+    console.log("appID: " + appID);
+
     var newAppointment: Appointment;
-    // newAppointment.AdvisorID = advisorID;
-    // newAppointment.StudentID = studentID;
+    newAppointment.AdvisorID = advisorID;
+    newAppointment.StudentID = studentID;
     newAppointment.AppointmentReason = reason;
-    // newAppointment.AppointmentID = appID;
+    newAppointment.AppointmentID = appID;
     newAppointment.AppointmentTime = hour + minute + amOrPM;
-    // console.log(newAppointment.AdvisorID);
-    // console.log(newAppointment.StudentID);
-    // console.log(newAppointment.AppointmentID);
+    console.log(newAppointment.AdvisorID);
+    console.log(newAppointment.StudentID);
+    console.log(newAppointment.AppointmentID);
     console.log(newAppointment.AppointmentReason);
     console.log(newAppointment.AppointmentTime);
 

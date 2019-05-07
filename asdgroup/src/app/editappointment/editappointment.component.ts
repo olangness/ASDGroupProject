@@ -6,20 +6,21 @@ import { Appointment} from '../appointment';
 @Component({
   selector: 'app-editappointment',
   templateUrl: './editappointment.component.html',
-  styleUrls: ['./editappointment.component.css']
+  styleUrls: ['./editappointment.component.css'],
+  providers: []
 })
 export class EditappointmentComponent implements OnInit {
   
-  AppointmentTable2: Appointment[];
+  AppointmentTable: Appointment[];
 
 
   @Output() showChange = new EventEmitter();
 
-  constructor(private appService: AppointmentService) { }
+  constructor(private appService2: AppointmentService) { }
 
 
   ngOnInit() {
-    this.appService.getAppointments().subscribe(data => {this.AppointmentTable2 = data 
+    this.appService2.getAppointments().subscribe(data => {this.AppointmentTable = data 
       console.log(data)
     });
   }
