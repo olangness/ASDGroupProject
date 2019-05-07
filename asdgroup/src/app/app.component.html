@@ -8,8 +8,13 @@
 <br>
 
 <button *ngIf="show=='home'" (click)="showAddAppointment()">Add Apointments</button>
+<button *ngIf="show=='home'" (click)="showEditAppointment()">Edit Apointments</button>
 <div class="addappointment" *ngIf="show=='addappointment'">
     <app-addappointment (showChange)="changeShow($event)"></app-addappointment>
+  </div>
+
+  <div class="editappointment" *ngIf="show=='editappointment'">
+    <app-editappointment (showChange)="changeShow($event)"></app-editappointment>
   </div>
 
 
@@ -17,7 +22,6 @@
 
 <div class="appointments" *ngIf="show=='home'">
   <app-appointment-list></app-appointment-list> 
-
 </div>
 
 

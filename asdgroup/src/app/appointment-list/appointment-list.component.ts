@@ -23,7 +23,7 @@ export class AppointmentListComponent implements OnInit {
     });
   }
 
-  deleteAppointment(appointmentIDINput) {
-    console.log("here is the appointment id: " + appointmentIDINput)
+  deleteAppointment(appointmentIDInput) {
+    console.log("here is the appointment id: " + appointmentIDInput)
   }
 }

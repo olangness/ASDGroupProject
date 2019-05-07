@@ -12,6 +12,16 @@ export class LoginComponent implements OnInit {
   //This code is for changing the ng if show. To switch the value edit the this.showChange.emit('NEW VALUE');
   @Output() showChange = new EventEmitter();
   
+
+
+  //DO NOT CHANGE
+  //DO NOT CHANGE
+  //DO NOT CHANGE
+  //DO NOT CHANGE
+  //DO NOT CHANGE
+  //DO NOT CHANGE
+  //DO NOT CHANGE
+  //DO NOT CHANGE vvvvvvvvv
   USERS: any = [
     {
         username: 'mattmartin',
@@ -43,7 +53,16 @@ export class LoginComponent implements OnInit {
         role: 'advisor',
         advisorID: 2
     },
+
 ]
+  //DO NOT CHANGE ^^^^^^^^^
+  //DO NOT CHANGE
+  //DO NOT CHANGE
+  //DO NOT CHANGE
+  //DO NOT CHANGE
+  //DO NOT CHANGE
+  //DO NOT CHANGE
+  //DO NOT CHANGE 
 
   hideLogin() {
     var un: string;
