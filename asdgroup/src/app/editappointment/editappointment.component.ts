@@ -36,9 +36,14 @@ export class EditappointmentComponent implements OnInit {
     for(let i = 0; i < APPOINTMENTS.length; i++) {
       console.log(i);
       if(APPOINTMENTS[i].appointmentID == x) {
-        delete APPOINTMENTS[i];
+
+        APPOINTMENTS.splice(i, 1);
+       
+        
       }
+
     }
+    console.log(APPOINTMENTS);
     console.log("survived ");
   }
 }
