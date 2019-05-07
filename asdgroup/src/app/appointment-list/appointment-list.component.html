@@ -6,6 +6,6 @@
       <li>AppointmentId: {{appointment.AppointmentID}}</li>
       <li>Appointment Reason: {{appointment.AppointmentReason}}</li>
       <li>Appointment Time: {{appointment.AppointmentTime}}</li>
-      <button>Delete</button>
+      <button (click)="deleteAppointment({{appointment.AppointmentID}})">Delete</button>
     </ul>
     
