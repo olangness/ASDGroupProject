@@ -1,7 +1,7 @@
 export interface Appointment{
-    AdvisorID?: number;
-    AppointmentID?: number;
-    AppointmentReason?: string;
-    AppointmentTime?: string;
-    StudentID?: number;
+    advisorID: number;
+    appointmentID: number;
+    appointmentReason: string;
+    appointmentTime: string;
+    studentID: number;
 }
