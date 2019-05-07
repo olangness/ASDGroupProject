@@ -1,6 +1,6 @@
 <h2>Appointment List</h2>
     <h3>{{errorMsg}}</h3>
-    <ul *ngFor="let appointment of AppointmentTable; let i = index">
+    <ul *ngFor="let appointment of AppointmentTable">
       ______________________________________________________
       <li>AdvisorId: {{appointment.AdvisorID}}</li>
       <li>StudentId: {{appointment.StudentID}}</li>
@@ -8,8 +8,8 @@
       <li>Appointment Reason: {{appointment.AppointmentReason}}</li>
       <li>Appointment Time: {{appointment.AppointmentTime}}</li>
 
-      <li>{{i}}</li>
-      <button (click)="deleteAppointment(index)">Delete</button>
+  
+   
 
 
     </ul>
