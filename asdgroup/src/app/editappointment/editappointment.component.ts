@@ -21,9 +21,7 @@ export class EditappointmentComponent implements OnInit {
     
   }
 
-
   ngOnInit() {
-    
   }
 
   goBack() {
@@ -39,6 +37,6 @@ export class EditappointmentComponent implements OnInit {
         delete APPOINTMENTS[i];
       }
     }
-    console.log("survived ");
+    console.log("survived");
   }
 }
