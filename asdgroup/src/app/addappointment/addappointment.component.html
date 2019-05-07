@@ -91,17 +91,10 @@ Set Date(m/d/y):
 
 <button (click)="goBack()">Go Back</button>
 
-<ul *ngFor="let appointment of AppointmentTable">
-  ______________________________________________________
-  
+<ul *ngFor="let appointment of AppointmentTable">  
   <li>AdvisorId: {{appointment.advisorID}}</li>
   <li>StudentId: {{appointment.studentID}}</li>
   <li>AppointmentId: {{appointment.appointmentID}}</li>
   <li>Appointment Reason: {{appointment.appointmentReason}}</li>
   <li>Appointment Time: {{appointment.appointmentTime}}</li>
-
-
-
-
-
 </ul>
