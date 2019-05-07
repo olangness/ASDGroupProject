@@ -1,6 +1,7 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { AppointmentService} from '../appointment.service';
 import { Appointment} from '../appointment';
+import {APPOINTMENTS} from '../db-data';
 
 
 @Component({
@@ -11,18 +12,18 @@ import { Appointment} from '../appointment';
 })
 export class EditappointmentComponent implements OnInit {
   
-  AppointmentTable: Appointment[];
+  AppointmentTable: Appointment[] = APPOINTMENTS;
 
 
   @Output() showChange = new EventEmitter();
 
-  constructor(private appService2: AppointmentService) { }
+  constructor(private appService: AppointmentService) { 
+    
+  }
 
 
   ngOnInit() {
-    this.appService2.getAppointments().subscribe(data => {this.AppointmentTable = data 
-      console.log(data)
-    });
+    
   }
 
   goBack() {
