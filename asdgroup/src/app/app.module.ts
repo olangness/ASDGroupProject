@@ -10,8 +10,8 @@ import {AngularFireDatabaseModule} from 'angularfire2/database';
 import {environment} from '../environments/environment';
 import { AppointmentCardComponent } from './appointment-card/appointment-card.component';
 import { HomedetailsComponent } from './homedetails/homedetails.component';
-import { AppointmentListComponent } from './appointment-list/appointment-list.component';
-import { AppointmentService } from './appointment.service';
+
+//import { AppointmentService } from './appointment.service';
 import { AddappointmentComponent } from './addappointment/addappointment.component';
 import { EditappointmentComponent } from './editappointment/editappointment.component';
 
@@ -21,7 +21,6 @@ import { EditappointmentComponent } from './editappointment/editappointment.comp
     LoginComponent,
     AppointmentCardComponent,
     HomedetailsComponent,
-    AppointmentListComponent,
     AddappointmentComponent,
     EditappointmentComponent,
   ],
@@ -32,7 +31,7 @@ import { EditappointmentComponent } from './editappointment/editappointment.comp
     AngularFirestoreModule,
     AngularFireStorageModule
   ],
-  providers: [AppointmentService],
+  //providers: [AppointmentService],
   bootstrap: [AppComponent]
 })
 
