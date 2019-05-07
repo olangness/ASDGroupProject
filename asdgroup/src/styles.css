@@ -2,5 +2,42 @@
 
 body{
     background-color: rgb(39, 39, 39);
-    color: white
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+button{
+    background-color: rgb(90, 89, 89); 
+  border: none;
+  color: white;
+  margin:   10px 10px 10px 0px;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+input{
+    margin: 10px 0px 10px 0px;
+    background-color: rgb(90, 89, 89);
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+select{
+    margin: 10px 0px 10px 0px;
+    background-color: rgb(90, 89, 89);
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+ul{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    background-color: rgb(90, 89, 89);
+    width: 50%;
 }
