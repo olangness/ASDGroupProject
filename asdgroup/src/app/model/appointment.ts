@@ -3,5 +3,5 @@ export interface Appointment{
     studentID: number;
     appointmentID: number;
     appointmentReason: string;
-    appointmentTime: Date;
+    appointmentTime: string;
 }

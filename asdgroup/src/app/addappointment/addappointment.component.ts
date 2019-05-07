@@ -1,6 +1,5 @@
 import { Component, Output, OnInit, EventEmitter } from '@angular/core';
-import { AppointmentService} from '../appointment.service';
-import { Appointment} from '../appointment';
+import { Appointment} from '../model/appointment';
 import { APPOINTMENTS } from '../db-data';
 
 @Component({
@@ -35,14 +34,14 @@ export class AddappointmentComponent implements OnInit {
     console.log("appID: " + appID);
     var time: string = hour + ":" + minute + amOrPM;
 
-    var newAppointment: Appointment = {AdvisorID: advisorID, StudentID: studentID, AppointmentReason: reason, AppointmentID: appID, AppointmentTime: time };
-    console.log("AdvisorID: " + newAppointment.AdvisorID);
-    console.log("StudentID: " + newAppointment.StudentID);
-    console.log("AppointmentID: " + newAppointment.AppointmentID);
-    console.log("Reason: " + newAppointment.AppointmentReason);
-    console.log("Time: " + newAppointment.AppointmentTime);
+    var newAppointment: Appointment = {advisorID: advisorID, studentID: studentID, appointmentReason: reason, appointmentID: appID, appointmentTime: time };
+    console.log("AdvisorID: " + newAppointment.advisorID);
+    console.log("StudentID: " + newAppointment.studentID);
+    console.log("AppointmentID: " + newAppointment.appointmentID);
+    console.log("Reason: " + newAppointment.appointmentReason);
+    console.log("Time: " + newAppointment.appointmentTime);
 
-    APPOINTMENTS.push(newAppointment);
+    this.AppointmentTable.push(newAppointment);
   }
 
 

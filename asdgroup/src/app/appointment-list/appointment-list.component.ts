@@ -1,29 +1,28 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { AppointmentService} from '../appointment.service';
-import { Appointment} from '../appointment';
+import { Appointment} from '../model/appointment';
 
-@Component({
-  selector: 'app-appointment-list',
-  templateUrl: './appointment-list.component.html',
-  styleUrls: ['./appointment-list.component.css'],
-  providers: []
-})
-export class AppointmentListComponent implements OnInit {
+// @Component({
+//   selector: 'app-appointment-list',
+//   templateUrl: './appointment-list.component.html',
+//   styleUrls: ['./appointment-list.component.css'],
+//   providers: []
+// })
+// export class AppointmentListComponent implements OnInit {
 
-  AppointmentTable: Appointment[];
+//   AppointmentTable: Appointment[];
 
-  constructor(private appService: AppointmentService) { }
+//   constructor(private appService: AppointmentService) { }
 
-  @Input()
+//   @Input()
 
 
-  ngOnInit() {
-    this.appService.getAppointments().subscribe(data => {this.AppointmentTable = data 
-      console.log(data)
-    });
-  }
+//   ngOnInit() {
+//     this.appService.getAppointments().subscribe(data => {this.AppointmentTable = data 
+//       console.log(data)
+//     });
+//   }
 
-  deleteAppointment(appointmentIDInput) {
-    console.log("here is the appointment id: " + appointmentIDInput)
-  }
-}
+//   deleteAppointment(appointmentIDInput) {
+//     console.log("here is the appointment id: " + appointmentIDInput)
+//   }
+// }
