@@ -1,5 +1,5 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-
+import { UserInfoService } from '../user-info.service';
 import { Appointment} from '../appointment';
 import {APPOINTMENTS} from '../db-data';
 
@@ -17,7 +17,7 @@ export class EditappointmentComponent implements OnInit {
 
   @Output() showChange = new EventEmitter();
 
-  constructor() { 
+  constructor(private appservice: UserInfoService) { 
     
   }
 

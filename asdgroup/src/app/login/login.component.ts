@@ -1,6 +1,9 @@
 import { Component, EventEmitter, Output, OnInit } from '@angular/core';
 import { User } from '../model/user';
 import { USERS } from '../db-data';
+import { UserInfoService } from '../user-info.service';
+import { SelectorListContext } from '@angular/compiler';
+import { InternalFormsSharedModule } from '@angular/forms/src/directives';
 
 @Component({
   selector: 'app-login',
@@ -64,6 +67,8 @@ export class LoginComponent implements OnInit {
   //DO NOT CHANGE
   //DO NOT CHANGE 
 
+  constructor(private appservice: UserInfoService) { }
+
   hideLogin() {
     var un: string;
     var pw: string;
@@ -75,6 +80,18 @@ export class LoginComponent implements OnInit {
       for(let i = 0; i < USERS.length; i++){
         console.log(i);
         if(USERS[i].username == un && USERS[i].password == pw){
+          if(USERS[i].role == 'advisor'){
+            this.appservice.setRole(USERS[i].role);
+            this.appservice.setRoleId(USERS[i].advisorID);
+            console.log('role: ' + this.appservice.getRole());
+            console.log('ID: ' + this.appservice.getId());
+          }
+          if(USERS[i].role == 'student'){
+            this.appservice.setRole(USERS[i].role);
+            this.appservice.setRoleId(USERS[i].studentID);
+            console.log('role: ' + this.appservice.getRole());
+            console.log('ID: ' + this.appservice.getId());
+          }
           this.showChange.emit('home');
           break;
         }
@@ -88,7 +105,7 @@ export class LoginComponent implements OnInit {
     //this.showChange.emit('home'); //this is the event send to change the ng if show to
   }
   //^^^^^^^^^
-  constructor() { }
+  
 
   ngOnInit() {
   }

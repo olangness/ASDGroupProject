@@ -1,6 +1,7 @@
 import { Component, Output, OnInit, EventEmitter } from '@angular/core';
 import { Appointment} from '../model/appointment';
 import { APPOINTMENTS } from '../db-data';
+import { UserInfoService} from '../user-info.service';
 
 @Component({
   selector: 'app-addappointment',
@@ -10,7 +11,7 @@ import { APPOINTMENTS } from '../db-data';
 export class AddappointmentComponent implements OnInit {
   @Output() showChange = new EventEmitter();
 
-  constructor() { }
+  constructor(private appservice: UserInfoService) { }
 
   AppointmentTable: Appointment[] = APPOINTMENTS;
 
@@ -22,11 +23,19 @@ export class AddappointmentComponent implements OnInit {
     var  minute: string = (<HTMLSelectElement>document.getElementById('minuteBox')).value;
     var  amOrPM: string =(<HTMLSelectElement>document.getElementById('amOrPmBox')).value;
     var  reason: string = (document.getElementById("reason") as HTMLInputElement).value;
-    var studentID: number = parseInt((document.getElementById("sID") as HTMLInputElement).value);
-    var advisorID: number = parseInt((document.getElementById("aID") as HTMLInputElement).value);
+    if (this.appservice.getRole() == 'advisor'){
+      var studentID: number = parseInt((document.getElementById("sID") as HTMLInputElement).value);
+      var advisorID: number = this.appservice.getId();
+    }
+    if (this.appservice.getRole() == 'student') {
+      var advisorID: number = parseInt((document.getElementById("aID") as HTMLInputElement).value);
+      var studentID: number = this.appservice.getId();
+    }
     //var appID: number = parseInt((document.getElementById("appID") as HTMLInputElement).value);
     var time: string = hour + ":" + minute + amOrPM;
-    var appID: number = APPOINTMENTS.length + 1;
+    this.appservice.incrementCount();
+    var appID: number = this.appservice.getCount();
+    console.log('Count: ' + this.appservice.getCount());
 
     console.log("hour: " + hour); //tests to make sure data is being read
     console.log("minute: " + minute);

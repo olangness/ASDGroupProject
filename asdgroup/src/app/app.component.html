@@ -1,8 +1,8 @@
 <body>
   
 
-<div *ngIf="show=='login'">
-  <app-login (showChange)="changeShow($event)"></app-login>
+<div class="login" *ngIf="show=='login'">
+  <app-login (showChange)="changeShow($event)" (changeRole)="changeRole($event)" (changeId)="changeId($event)"></app-login>
 </div>
 
 <div class="addappointment" *ngIf="show=='addappointment'">
@@ -14,7 +14,7 @@
   </div>
 <br>
 
-<button *ngIf="show=='home'" (click)="showAddAppointment()">Add Apointments</button>
+<button class="home" *ngIf="show=='home'" (click)="showAddAppointment()">Add Apointments</button>
     <button *ngIf="show=='home'" (click)="showEditAppointment()">Edit Apointments</button>
 <div class="homedetails" *ngIf="show=='home'">
     

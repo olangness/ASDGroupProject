@@ -12,8 +12,10 @@ import { AppointmentCardComponent } from './appointment-card/appointment-card.co
 import { HomedetailsComponent } from './homedetails/homedetails.component';
 
 //import { AppointmentService } from './appointment.service';
+import { UserInfoService } from './user-info.service';
 import { AddappointmentComponent } from './addappointment/addappointment.component';
 import { EditappointmentComponent } from './editappointment/editappointment.component';
+import { InternalFormsSharedModule } from '@angular/forms/src/directives';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,7 @@ import { EditappointmentComponent } from './editappointment/editappointment.comp
     AngularFirestoreModule,
     AngularFireStorageModule
   ],
-  //providers: [AppointmentService],
+  providers: [UserInfoService],
   bootstrap: [AppComponent]
 })
 
