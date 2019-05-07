@@ -26,7 +26,7 @@ export class AppointmentService {
     this.appoinmentCollection.add(app);
   }
 
-  creeteAppointment(data: Appointment){ //havent gotten to work yet
+  createAppointment(data: Appointment){ //havent gotten to work yet
     return new Promise<any>((resolve, reject) =>{
       this.appoinmentCollection.add(data).then(res => {}, err => reject(err));
     });
